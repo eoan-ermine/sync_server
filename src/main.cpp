@@ -139,6 +139,7 @@ int main() {
     // Объект, позволяющий принимать tcp-подключения к сокету
     tcp::acceptor acceptor(ioc, {address, port});
 
+    std::cout << "Server has started..."sv << std::endl;
     while (true) {
         std::cout << "Waiting for socket connection"sv << std::endl;
         tcp::socket socket(ioc);
